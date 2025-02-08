@@ -1,0 +1,9 @@
+apache-airflow==2.5.3
+pendulum==2.1.2
+apache-airflow-providers-postgres==5.8.0
+apache-airflow-providers-apache-spark
+dbt-core==1.6.0
+dbt-spark==1.6.2
+dbt-postgres==1.6.0
+psycopg2-binary
+python-dotenv
