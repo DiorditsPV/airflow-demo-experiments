@@ -27,6 +27,7 @@ services:
       - ./volumes/plugins:/opt/airflow/plugins
       - ./volumes/config:/opt/airflow/config
       - ./workflow_tools:/opt/airflow/workflow_tools
+      - ./dbt_projects:/opt/airflow/dbt_projects
     environment:
       <<: *common-env
     restart: unless-stopped

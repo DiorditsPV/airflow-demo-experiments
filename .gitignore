@@ -6,3 +6,8 @@ airflow_settings.yaml
 *.pyc
 */__pycache__/*
 /.venv/
+
+# DBT
+dbt_projects/*/target/
+dbt_projects/*/dbt_packages/
+dbt_projects/*/logs/
