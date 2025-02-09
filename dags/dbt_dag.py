@@ -3,14 +3,13 @@ from airflow import DAG
 from datetime import datetime, timedelta
 import os
 
-# Получаем путь к конкретному dbt проекту
 dbt_project_dir = os.getenv('DBT_JAFFLE_SHOP_PATH', '/opt/airflow/dbt_projects/jaffle_shop')
 
 with DAG(
-    dag_id="dbt_jaffle_shop",  # Обновляем имя DAG для отражения конкретного проекта
+    dag_id="dbt_jaffle_shop",
     start_date=datetime(2024, 1, 1),
     schedule_interval="@once",
-    tags=["dbt", "jaffle_shop"],  # Добавляем тег проекта
+    tags=["dbt", "jaffle_shop"],
     dagrun_timeout=timedelta(hours=24),
     catchup=False,
     default_args={

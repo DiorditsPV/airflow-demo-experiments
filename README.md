@@ -1,4 +1,7 @@
-Этот проект предназначен для экспериментов, отладки Airflow DAG и тестирования гипотез, связанных с использованием Airflow и сопутствующего стека.
+Проект предназначен для:
+
+- отладка Airflow DAG,
+- скриптов сборки DBT из manifest.
 
 ## Running on
 
@@ -30,10 +33,8 @@
 
 ## Запуск проекта
 
-Для запуска проекта необходимо:
-
-1. Клонировать репозиторий: `git clone https://github.com/DiorditsPV/airflow-demo-experiments.git`
-2. `cd airflow-experimental`
+1. `git clone https://github.com/DiorditsPV/airflow-demo-experiments.git`
+2. `cd airflow-demo-experiments`
 3. Создать файл `.env` на основе `.env.example`
-4. Запустить сервисы: `make full_up`
+4. `make full_up`
 5. Airflow UI на `http://localhost:8080`, DBT UI на `http://localhost:9090`, Postgres на `localhost:5432`
