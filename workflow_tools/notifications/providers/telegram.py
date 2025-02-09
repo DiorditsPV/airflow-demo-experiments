@@ -1,12 +1,9 @@
 import logging
-
 import requests
 from airflow.utils.context import Context
-
-from utils.alert.alert_config.telegram_config import TELEGRAM_CONFIG
+from workflow_tools.notifications.config.telegram_config import TELEGRAM_CONFIG
 
 logger = logging.getLogger(__name__)
-
 
 class TelegramNotifier:
     def __init__(self):
@@ -59,11 +56,4 @@ def task_success_callback(context: Context):
 
 def task_failure_callback(context: Context):
     notifier = TelegramNotifier()
-    notifier.send_state_message("failed", context)
-
-
-if __name__ == "__main__":
-    """Этот блок должен быть перемещен в отдельный модуль для тестирования"""
-
-    notifier = TelegramNotifier()
-    notifier.send_message("Hello, chat")
+    notifier.send_state_message("failed", context) 
