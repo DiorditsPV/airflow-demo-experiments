@@ -1,21 +1,11 @@
-# Airflow Experimental Project
+Этот проект предназначен для экспериментов, отладки Airflow DAG и тестирования гипотез, связанных с использованием Airflow и сопутствующего стека.
 
-Этот проект предназначен для экспериментов, отладки Airflow DAG и тестирования гипотез, связанных с использованием Airflow и сопутствующего стека. Он имеет структуру, приближенную к целевому production-проекту.
+## Running on
 
-## Цели проекта
-
-- Быстрое прототипирование и тестирование идей, связанных с Airflow
-- Отладка и тестирование DAG в изолированном окружении
-- Проверка интеграции Airflow с другими компонентами стека (Pyspark, DBT и т.д.)
-- Хранение примеров кода, используемых в production DAG (gRPC, API, Kafka и т.д.)
-
-## Стек проекта
-
-- Apache Airflow - оркестрация задач и управление зависимостями
-- Pyspark - обработка больших данных
-- DBT (Data Build Tool) - трансформация данных
-- PostgreSQL - хранение метаданных Airflow и результатов трансформаций
-- Docker - контейнеризация и развертывание сервисов
+- Apache Airflow
+- Pyspark
+- DBT (Data Build Tool)
+- PostgreSQL
 
 ## Структура проекта
 
@@ -25,7 +15,6 @@
 - `.env` - файл с переменными окружения
 - `.gitignore` - файл с исключениями для Git
 - `docker-compose.yaml` - конфигурация Docker Compose для развертывания сервисов
-- `README.md` - документация проекта
 
 ## Переменные окружения
 
@@ -43,9 +32,8 @@
 
 Для запуска проекта необходимо:
 
-1. Установить Docker и Docker Compose
-2. Клонировать репозиторий: `git clone https://github.com/username/airflow-experimental.git`
-3. Перейти в директорию проекта: `cd airflow-experimental`
-4. Создать файл `.env` и задать необходимые переменные окружения (см. пример в `.env.example`)
-5. Запустить сервисы: `docker-compose up -d`
-6. Открыть Airflow UI в браузере: `http://localhost:8080`
+1. Клонировать репозиторий: `git clone https://github.com/DiorditsPV/airflow-demo-experiments.git`
+2. `cd airflow-experimental`
+3. Создать файл `.env` на основе `.env.example`
+4. Запустить сервисы: `make full_up`
+5. Airflow UI на `http://localhost:8080`, DBT UI на `http://localhost:9090`, Postgres на `localhost:5432`

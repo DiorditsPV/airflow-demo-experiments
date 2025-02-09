@@ -14,6 +14,8 @@ build:
 up:
 	$(DOCKER_COMPOSE) up -d
 
+full_up: build up
+
 down:
 	$(DOCKER_COMPOSE) down
 
